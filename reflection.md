@@ -28,7 +28,7 @@ Document at least 3 bugs you found. Add rows as needed.
 ## 2. How did you use AI as a teammate?
 ## I used AI by inputting the bugs I found into Claude so that Claude can explain which lines are causing the problems. 
 ## They pointed out the if statements that return Go Higher or Go Lower have the conditions flipped, which is more of a logical error than a compliling error.
-## AI helped move lines to code to different files and helped reccomend solutions.
+## AI helped move lines to code to different files and helped reccomend solutions and also understand synthax I don't know.
 
 I used Claude (Claude Code, in agent mode inside VS Code) as my AI teammate.
 
