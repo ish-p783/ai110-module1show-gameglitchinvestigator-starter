@@ -1,6 +1,15 @@
 # 💭 Reflection: Game Glitch Investigator
 
 Answer each question in 3 to 5 sentences. Be specific and honest about what actually happened while you worked. This is about your process, not trying to sound perfect.
+## summary: Add regression tests for all game logic and update reflection
+
+- Expand tests/test_game_logic.py from 5 to 19 cases covering
+  check_guess, get_range_for_difficulty, parse_guess, and update_score
+- Add a regression test for every fixed bug: reversed hints, swapped
+  Normal/Hard ranges, and scoring (wrong guesses never add points,
+  first-guess win awards 90, 10-point floor)
+- Add parse_guess coverage: integers, decimals, empty, None, non-numbers
+- Fill in reflection.md sections 2 and 3 (AI collaboration + testing)
 
 ## 1. What was broken when you started?
 ## The game would say lower even after hitting the min value (1) or say higher even after guessing atleast the max value (100). The game was supposed to give hints that indicated to guess within the range or to not go beyond the limits already given.
@@ -53,14 +62,14 @@ I decided a bug was really fixed by checking it two ways: running the live game 
 
 ---
 
-## 4. What did you learn about Streamlit and state?
+## 4. What did you learn about Streamlit and state? Reruns are when you interact with a website or feature, it reruns the entire code to actually run the lines dedicated for that specific interaction. Session state is needed because reruns will reset variables unneccesarily so the values are reset to original values when it's not intended to, the session state will preserve the memory so variables like attempts isn't reset everytime a player guesses.
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
 
 ---
 
 ## 5. Looking ahead: your developer habits
-
+## I plan to use AI to assist in understanding why my code doesn't work, not just fixing it completely for me as I want to understand the functions of the code and how everything is connected and results in a certain type of issue being caused and why it can't easily be fixed. This project showed me AI can be a tool to help us understand our code better instead of completely erasing human creativity and learning in the process. My prompting strategy was describing the issue and how it could be fixed or trying to guide through the process to troubleshoot.
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
 - What is one thing you would do differently next time you work with AI on a coding task?
